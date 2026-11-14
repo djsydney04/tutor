@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publish a Skill"
+  short_description: "Add skills to the shared repo and publish them"
+  default_prompt: "Use $skill-publish to turn this workflow into a reusable skill and publish it to my agent-skills repo."
