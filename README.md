@@ -1,20 +1,21 @@
-# Agent skills from Jane Street
+# Tutor
 
-A collection of skills for AI agents and chatbots.
-Each skill is a directory containing a `SKILL.md` file
-with instructions for the agent.
+A fork of [Jane Street’s agent skills](https://github.com/janestreet/agent_skills)
+that combines Socratic questions with patient, adaptive explanations.
 
-## Skills
+The tutor keeps diagnostic placement, skill maps, spaced review, and assessments.
+When a learner is unsure or wrong, it explains the missing concept immediately,
+shows a worked example, and asks one gentle check for understanding. Repeated
+confusion prompts a different explanation or a return to prerequisites. A correct
+answer after help counts as guided practice, not independent mastery.
 
-- **socratic-tutor** — turns an LLM into a strict personal tutor that teaches a
-  topic of your choice using the Socratic method: a diagnostic, a skill map with
-  levels 0-5, one question at a time, spaced review, and a final assessment.
+## Use
 
-## How to use
+Copy `socratic-tutor/` into your agent’s skills folder, then ask “Teach me X.”
+You can say “explain more,” “back up,” or “just tell me” at any time.
 
-With a coding agent that supports the common `SKILL.md` format, copy the skill
-directory into your agent's skills folder, then ask the agent to use it
-("teach me X").
+For a plain chatbot, paste the body of `socratic-tutor/SKILL.md` into the chat,
+followed by the topic you want to learn.
 
-With a plain chatbot, paste the body of the skill's `SKILL.md` into the chat
-(or into a custom/system prompt), followed by what you want it to do.
+Original skill copyright Jane Street Group, LLC. This fork retains the MIT license
+in [LICENSE.md](LICENSE.md) and is not affiliated with or endorsed by Jane Street.
